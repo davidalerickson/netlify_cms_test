@@ -8,6 +8,11 @@ backend:
 # This line should *not* be indented
 media_folder: static/img # Media files will be stored in the repo under images/uploads
 public_folder: /img
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dontbzd8
+    api_key: 157179379144737
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
