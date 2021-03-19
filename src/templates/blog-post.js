@@ -21,7 +21,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <img src={post.frontmatter.thumbnail} alt="post piture" />
+        {/* <img src={post.frontmatter.thumbnail} alt="post piture" /> */}
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
@@ -86,7 +86,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        thumbnail
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
