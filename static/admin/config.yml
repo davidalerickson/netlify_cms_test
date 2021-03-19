@@ -13,7 +13,7 @@ media_library:
   config:
     cloud_name: dontbzd8
     api_key: 157179379144737
-    mulitple: true
+    multiple: true
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
