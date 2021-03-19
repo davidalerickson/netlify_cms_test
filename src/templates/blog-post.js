@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import './blog-post.css'
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -21,7 +22,9 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        {post.frontmatter.thumbnail && <p>{post.frontmatter.thumbnail}</p>}
+        {post.frontmatter.thumbnail && post.frontmatter.thumbnail.map((thumb, index) => {
+          return <img src={thumb} key={index} alt="" height="400px"></img>
+        })}
         {/* <img src={post.frontmatter.thumbnail} alt="post piture" /> */}
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
